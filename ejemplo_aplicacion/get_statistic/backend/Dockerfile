@@ -1,5 +1,4 @@
-FROM git.manifone.com:4443/manifone-data/mnfn-ia-dockers:mnfn-fastapi-latest
-# FROM mnfn-fastapi
+FROM mnfn-fastapi
 LABEL AUTHOR=MariaSoto 
 LABEL MAIL=m.soto@manifone.com
 

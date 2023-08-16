@@ -1,4 +1,3 @@
-# FROM mnfn-python-3.10
 #python----------
 FROM python:3.10.4-slim-buster
 

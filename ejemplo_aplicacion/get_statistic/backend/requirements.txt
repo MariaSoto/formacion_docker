@@ -7,4 +7,5 @@ databases #sqlalchemy core
 python-multipart
 #mysqlclient
 pymysql
+pydantic<2.0.0
 cryptography
