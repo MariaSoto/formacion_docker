@@ -1,0 +1,11 @@
+Inside container mysql https://phoenixnap.com/kb/mysql-docker-container
+mysql -uuserme -psomepassword
+From terminal : 
+    mysql -u userme -psomepassword -h 127.0.0.1 --port=3306
+
+mysql -u sql-mnfd25mst -px4BWLeg5tTqmNSq3Mor -h 10.207.201.214
+sudo docker run -it --net=host --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecret  mysql
+
+https://medium.com/@ivfomini/mysql-phpmyadmin-docker-running-local-database-1f6953bfa4bb
+https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91
+

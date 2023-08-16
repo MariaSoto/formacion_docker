@@ -1,0 +1,14 @@
+{
+
+    "destinations_clients":{
+        "dialect":"mysql",
+        "driver":"pymysql",
+        "host_url_localhost":"127.0.0.1:3306",
+        "host_url":"192.168.192.2:3306",
+        "user":"userme",
+        "password":"somepassword",
+        "database":"destinations_clients",
+        "table":""
+        }
+
+}

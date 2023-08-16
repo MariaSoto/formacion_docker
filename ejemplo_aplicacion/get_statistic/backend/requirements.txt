@@ -1,0 +1,10 @@
+pandas
+requests    
+#Server
+psycopg2-binary
+# Database
+databases #sqlalchemy core
+python-multipart
+#mysqlclient
+pymysql
+cryptography

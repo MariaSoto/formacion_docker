@@ -1,0 +1,51 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:latest    
+    container_name: container_db
+    volumes:
+      - db_data:/var/lib/mysql
+      # - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=$ROOT_PASSWORD
+      - MYSQL_DATABASE=destinations_clients
+      - MYSQL_USER=$USER
+      - MYSQL_PASSWORD=$ROOT_PASSWORD
+    ports:
+      - "3306:3306"  
+    # command:
+      # - '--local_infile=1'
+      # - mysqld --init-file=/docker-entrypoint-initdb.d/init.sql
+    
+  get_data:
+    build: ./backend
+    container_name: container_get_data
+    environment:
+      - ROOT_PATH=/
+      - BIND=0.0.0.0:5003
+      - FILE_ACCESS_DB=./configuration/access_db.json
+      - HOSTDB_URI=db
+
+    ports:
+      - "5003:5003"
+
+  myadmin:
+      image: phpmyadmin/phpmyadmin      
+      container_name: container_phpmyadmin
+      ports:
+          - "8083:80"
+      environment:
+          - UPLOAD_LIMIT=1G
+          # - PMA_ARBITRARY=1
+          - PMA_HOST=db
+      restart: always
+      depends_on:
+          - db
+
+volumes:
+  db_data:
+    driver: "local"
+  
+
+    
