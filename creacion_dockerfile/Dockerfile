@@ -11,3 +11,6 @@ EXPOSE 5000
 VOLUME /app/logs
 
 CMD python3 app.py
+
+#docker build -t python_flask .
+# docker run -it --name test4 python_flask

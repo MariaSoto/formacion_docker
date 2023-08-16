@@ -8,10 +8,10 @@ services:
       # - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=$ROOT_PASSWORD
-      - MYSQL_DATABASE=destinations_clients
-      - MYSQL_USER=$USER
-      - MYSQL_PASSWORD=$ROOT_PASSWORD
+      MYSQL_ROOT_PASSWORD: somepassword
+      MYSQL_DATABASE: destinations_clients
+      MYSQL_USER: userme
+      MYSQL_PASSWORD: somepassword
     ports:
       - "3306:3306"  
     # command:
